@@ -26,9 +26,11 @@
     --section-title-color: var(--color-black);
 }
 
-* {
+*, *:before, *:after {
     box-sizing: border-box;
-}
+} /* 
+*:before inserts sth before all elements and
+*:after will be after all elements */
 
 html {
     scroll-behavior: smooth;
