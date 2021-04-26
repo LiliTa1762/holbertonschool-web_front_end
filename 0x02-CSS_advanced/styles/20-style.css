@@ -190,5 +190,5 @@ ul.row {
 .row::after {
     content: none;
     display: table;
-    float: none;
+    clear: both; /* Any floating elements on either side */
 }
