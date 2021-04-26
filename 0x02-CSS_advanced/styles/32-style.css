@@ -57,7 +57,7 @@
     --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
 }
 
-* {
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
@@ -116,10 +116,7 @@ h1 h2 h3 h4 h5 h6 {
 
 .nav .nav-link {
     display: block;
-    padding-top: 0.5rem; /* Root element */
-    padding-right: 1rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
+    padding: 0.5rem 1rem;  /* Root element */
 }
 
 .nav .nav-link:hover {
@@ -215,7 +212,7 @@ ul.row {
 
 [class^="col-"] {
     float: left;
-    padding: 5rem; /* Root element */
+    padding: 0.5rem; /* Root element */
 }
 
 .section {
