@@ -35,7 +35,7 @@
     --nav-item-font-size: var(--font-size-medium);
     --nav-item-letter-spacing: 0.04rem; /* Root element */
     --nav-item-display: inline-block;
-    --nav-item-margin: 0 0 3em 0;
+    --nav-item-margin: 0 0 3rem 0;
     --nav-item-link-hover: var(--color-white);
     --section-tagline-margin: 0;
     --button-display: inline-block;
@@ -55,7 +55,7 @@
     --header-logo-link-left: 0;
 }
 
-* {
+*, *:before, *:after{
     box-sizing: border-box;
 }
 
@@ -72,7 +72,12 @@ body {
     line-height: var(--line-height-base);
 }
 
-h1 h2 h3 h4 h5 h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-bold);
 }
@@ -183,10 +188,7 @@ a:active {
 
 .nav .nav-link {
     display: block;
-    padding-top: 0.5rem; /* Root element */
-    padding-right: 1rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
+    padding: 0.5rem 1rem;  /* Root element */
 }
 
 .nav .nav-link:hover {
@@ -240,7 +242,7 @@ ul.row {
 
 [class^="col-"] {
     float: left;
-    padding: 5rem; /* Root element */
+    padding: 0.5rem; /* Root element */
 }
 
 [data-section-theme="dark"] {
@@ -272,7 +274,7 @@ ul.row {
     background-color: var(--color-light-grey);
 }
 
-a:hover .card-services {
+.card-services a:hover {
     color: var(--color-white);
     background-color: var(--color-primary);
     text-decoration: none;
@@ -290,12 +292,12 @@ a:hover .card-services {
 
 .card-testimonial .card-quote cite{
     display: block;
-    padding-top: 1em;
+    padding-top: 1rem;
     color: var(--color-primary);
 }
 
 .section-hero {
-    background-size:  90em auto;
+    background-size:  90rem auto;
 }
 
 .section-hero .section-title {
@@ -326,7 +328,7 @@ a:hover .card-services {
     overflow: hidden;
 }
 
-.card-work .card-outer img {
+.card-work .card-image img {
     height: 30rem;
     width: 100%;
     object-fit: cover;
