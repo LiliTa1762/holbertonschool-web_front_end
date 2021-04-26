@@ -269,6 +269,6 @@ a:hover .card-services {
 
 .card-testimonial .card-quote cite {
     display: block;
-    padding-top: 1em;
+    padding-top: 1rem; /* Root element */
     color: var(--color-primary);
 }
