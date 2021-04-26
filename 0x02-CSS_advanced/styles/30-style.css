@@ -292,7 +292,7 @@ ul.row {
 
 .card-testimonial .card-quote cite {
     display: block;
-    padding-top: 1em;
+    padding-top: 1rem;
     color: var(--color-primary);
 }
 
@@ -328,7 +328,7 @@ ul.row {
     overflow: hidden;
 }
 
-.card-work .card-outer img {
+.card-work .card-image img {
     height: 30rem;
     width: 100%;
     object-fit: cover;
