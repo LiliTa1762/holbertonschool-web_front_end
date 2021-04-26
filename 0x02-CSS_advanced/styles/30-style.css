@@ -55,7 +55,7 @@
     --header-logo-link-left: 0;
 }
 
-* {
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
@@ -72,7 +72,12 @@ body {
     line-height: var(--line-height-base);
 }
 
-h1 h2 h3 h4 h5 h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-bold);
 }
@@ -183,10 +188,7 @@ a:active {
 
 .nav .nav-link {
     display: block;
-    padding-top: 0.5rem;  /* Root element */
-    padding-right: 1rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
+    padding: 0.5rem 1rem;  /* Root element */
 }
 
 .nav .nav-link:hover {
@@ -295,7 +297,7 @@ a:hover .card-services {
 }
 
 .section-hero {
-    background-size:  90em auto;
+    background-size:  90rem auto;
 }
 
 .section-hero .section-title {
@@ -363,8 +365,8 @@ a:hover .card-services {
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     content: "";
 }
 
