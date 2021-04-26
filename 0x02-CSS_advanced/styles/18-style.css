@@ -86,7 +86,7 @@ a:active {
     color: var(--color-primary);
 }
 
-.section-title{
+.section-title {
     font-family: var(--font-family-title);
     font-size: var(--font-size-xx-large);
     font-weight: var(--font-weight-bold);
@@ -151,10 +151,7 @@ a:active {
 
 .nav .nav-link {
     display: block;
-    padding-top: 0.5rem;  /* Root element */
-    padding-right: 1rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
+    padding: 0.5rem 1rem;  /* Root element */
 }
 
 .nav .nav-link:hover{
