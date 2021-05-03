@@ -1,2 +1,19 @@
 /* Using mixin to assign */
 
+@mixin mbody {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+@mixin mdiv {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+body {
+	@include mbody();
+}
+
+div {
+	@include mdiv();
+}
