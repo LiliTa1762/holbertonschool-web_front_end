@@ -1,0 +1,6 @@
+/* Using for statement to assign */
+
+@for $i from h1 through h4 {
+	font-size: 1px + $i;
+}
+

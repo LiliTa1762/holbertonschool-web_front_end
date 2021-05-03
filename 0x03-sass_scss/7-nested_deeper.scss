@@ -1,0 +1,17 @@
+/* Using nested and more nested to assign */
+
+$fsize-body: 14px;
+$fsize-h1: 16px;
+$fsize-class: 12px;
+
+body {
+	font-size: $fsize-body;
+
+	&.h1 {
+		font-size: 16px;
+	}
+
+	&.smaller h1 {
+		font-size: $fsize-class;
+	}
+}

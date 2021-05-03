@@ -1,0 +1,9 @@
+/* Using import and each statement to assign */
+
+@import '11-photos';
+
+@each $pic in $list-name {
+	.photo-#{$pic} {
+		background: image-url("photos/{$pic}.png");
+	}
+}
