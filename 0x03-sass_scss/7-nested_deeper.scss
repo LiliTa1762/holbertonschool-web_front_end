@@ -7,11 +7,11 @@ $fsize-class: 12px;
 body {
 	font-size: $fsize-body;
 
-	&.h1 {
+	& h1 {
 		font-size: 16px;
 	}
 
-	&.smaller h1 {
+	& h1.smaller {
 		font-size: $fsize-class;
 	}
 }
