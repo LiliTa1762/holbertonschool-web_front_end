@@ -1,0 +1,16 @@
+/* Assign multiple styles */
+$body-color: #3D3D3D;
+$back-color: #6D6D6D;
+
+body {
+	color: $body-color;
+	background-color: $back-color;
+}
+
+p {
+	color: $body-color;
+}
+
+h2 {
+	background-color: $back-color;
+}
