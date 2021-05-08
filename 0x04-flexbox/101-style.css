@@ -1,0 +1,59 @@
+:root {
+	--color-box-1: rgba(175, 102, 244, 0.906);
+	--color-box-2: rgba(1, 212, 212, 0.906);
+	--color-box-3: rgba(160, 236, 45, 0.756);
+	--color-box-4: rgba(231, 42, 99, 0.756);
+	--color-box-5: rgba(255, 182, 47, 0.756);
+	--container-font: 20px;
+	--font-color: rgba(255, 255, 255, 0.913);
+}
+
+.container {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--container-font);
+	color: var(--font-color);
+}
+
+.container .box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box1 {
+	background-color: var(--color-box-1);
+	width: 4rem;
+	height: 3.5rem;
+	font-size: 1rem;
+}
+
+.box2 {
+	background-color: var(--color-box-2);
+	width: 7rem;
+	height: 5rem;
+	font-size: 2rem;
+}
+
+.box3 {
+	background-color: var(--color-box-3);
+	width: 11rem;
+	height: 8rem;
+	font-size: 4.5rem;
+}
+
+.box4 {
+	background-color: var(--color-box-4);
+	width: 7rem;
+	height: 5rem;
+	font-size: 2rem;
+}
+
+.box5 {
+	background-color: var(--color-box-5);
+	width: 4rem;
+	height: 3.5rem;
+	font-size: 1rem;
+}
