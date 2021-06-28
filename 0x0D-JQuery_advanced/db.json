@@ -1,0 +1,64 @@
+{
+	"posts": [
+	  {
+		"id": 1,
+		"title": "json-server",
+		"author": "typicode"
+	  },
+	  {
+		"title": "fd",
+		"author": "fffff",
+		"id": 2
+	  },
+	  {
+		"title": "jkd",
+		"author": "poioi",
+		"id": 3
+	  },
+	  {
+		"title": "qwewredf",
+		"author": "bvnc",
+		"id": 4
+	  },
+	  {
+		"title": "kjaspq",
+		"author": "frog",
+		"id": 5
+	  },
+	  {
+		"title": "lasjio",
+		"author": "duck",
+		"id": 6
+	  },
+	  {
+		"title": "pqmfie",
+		"author": "horse",
+		"id": 7
+	  },
+	  {
+		"title": "jkjspq",
+		"author": "cow",
+		"id": 8
+	  },
+	  {
+		"title": "msdpq",
+		"author": "bird",
+		"id": 9
+	  },
+	  {
+		"title": "oqqni",
+		"author": "bee",
+		"id": 10
+	  }
+	],
+	"comments": [
+	  {
+		"id": 1,
+		"body": "some comment",
+		"postId": 1
+	  }
+	],
+	"profile": {
+	  "name": "typicode"
+	}
+  }
