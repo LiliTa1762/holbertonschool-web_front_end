@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Basic Cookie</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div>
+			<h2>Login to the website</h1>
+			<input type="text" id="firstname" name="firstname" placeholder="Firstname">
+			<input type="text" id="email" name="email" placeholder="Email">
+			<button id="setCookies" onclick="setCookies()">Log me in</button>
+		</div>
+		<div>
+			<h2>Cookies</h2>
+			<button id="showCookies" onclick="showCookies()">Show the cookies</button>
+		</div>
+		<script>
+			function setCookies() {
+				let $firstname = document.getElementById("firstname").value;
+				let $email = document.getElementById("email").value;
+
+				document.cookie = `firstname = ${$firstname}`;
+				document.cookie = `email = ${$email}`;
+				document.cookie = "expires=Sat, 10 Jul 2021 00:00:00GMT"
+			}
+
+			function showCookies() {
+				let show = document.querySelectorAll("div");
+				show = show[1];
+				let p = document.createElement("p");
+				p.innerText = `Email: ${getCookie("email")} - Firstname: ${getCookie("firstname")}`;
+				show.appendChild(p);
+			}
+
+			function getCookie(name) {
+				let cookieName = name + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let x = decodedCookie.split(';');
+				for (let i = 0; i < x.length; i++) {
+					let j = x[i];
+					while (j.charAt(0) == ' ') {
+						j = j.substring(1);
+					}
+
+					if (j.indexOf(cookieName) == 0) {
+						return j.substring(cookieName.length, j.length);
+					}
+				}
+				return "";
+			}
+		</script>
+	</body>
+
+</html>
