@@ -3,49 +3,41 @@
 
 	<head>
 		<meta charset="utf-8" />
-		<title>Use cookie</title>
+		<title>Local storage</title>
 	</head>
 	<body>
-		<script type="text/javascript">
-			let availableItems = ["shampoo", "soap", "sponge", "water"]
-		
-			function additemTocart(item) {
-				localStorage.setItem(item, true);
-			}
-
-			function createStore() {
-				let lis = document.createElement("ul");
-				lis.setAttribute("id", "list");
-				document.body.appendChild(lis);
-				for (let i = 0; i < availableItems.length; i++) {
-					let item = availableItems[i];
-					let avalible = document.createElement("li");
-					avalible.innerHTML = item;
-					avalible.onclick = function(){
-					addItemToCart(item);
-					}
-					document.getElementById("list").appendChild(avalible);
-				}
-			}
-
-			function displayCart() {
-				let localLenght = localStorage.length;
-				if (localLenght === 0){
-
-				} else {
-					let paragraph = document.createElement("p");
-					paragraph.innerHTML = "You previously had X items in your cart";
-					document.body.appendChild(paragraph);
-				}
-			}
+		<script>
+			let availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
 
 			if (typeof localStorage !== 'undefined') {
 				createStore();
 				displayCart();
-
 			} else {
-				alert("Sorry, your browser does not support Web storage. Try again with a better one");
+				alert ('Sorry, your browser does not support Web storage. Try again with a better one');
 			}
+			
+			function addItemToCart(item) {
+				localStorage.setItem(item, true);
+			}
+
+			function createStore() {
+				let ul = document.createElement('ul');
+				document.body.appendChild(ul);
+				for (let i of availableItems) {
+					let li = document.createElement('li');
+					li.innerHTML = i;
+					li.setAttribute('onclick', `addItemToCart(${i})`);
+					ul.appendChild(li);
+				}
+			}
+
+			function displayCart() {
+				if (localStorage.length === 0) return;
+				let p = document.createElement('p');
+				p.innerHTML = `You previously had ${localStorage.length} items in your cart`
+				document.body.appendChild(p);
+			}
+
 		</script>
 	</body>
 </html>
