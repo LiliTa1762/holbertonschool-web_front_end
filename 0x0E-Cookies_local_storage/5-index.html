@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Use cookie</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let availableItems = ["shampoo", "soap", "sponge", "water"]
+		
+			function additemTocart(item) {
+				localStorage.setItem(item, true);
+			}
+
+			function createStore() {
+				let lis = document.createElement("ul");
+				lis.setAttribute("id", "list");
+				document.body.appendChild(lis);
+				for (let i = 0; i < availableItems.length; i++) {
+					let item = availableItems[i];
+					let avalible = document.createElement("li");
+					avalible.innerHTML = item;
+					avalible.onclick = function(){
+					addItemToCart(item);
+					}
+					document.getElementById("list").appendChild(avalible);
+				}
+			}
+
+			function displayCart() {
+				let localLenght = localStorage.length;
+				if (localLenght === 0){
+
+				} else {
+					let paragraph = document.createElement("p");
+					paragraph.innerHTML = "You previously had X items in your cart";
+					document.body.appendChild(paragraph);
+				}
+			}
+
+			if (typeof localStorage !== 'undefined') {
+				createStore();
+				displayCart();
+
+			} else {
+				alert("Sorry, your browser does not support Web storage. Try again with a better one");
+			}
+		</script>
+	</body>
+</html>
